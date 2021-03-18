@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--讀取(與用戶內容外框切換)-->
+        <ProgressBar
+            android:id="@+id/profile_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--用戶內容外框(與讀取切換)-->
+        <LinearLayout
+            android:id="@+id/profile_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroud"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--用戶上框(照片)-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#9999FF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--用戶上框內容(橘色)-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!--用戶照片-->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileImage"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/pre_profile_image"></de.hdodenhof.circleimageview.CircleImageView>
+                        <TextView
+                            android:id="@+id/profileEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/profile_default_email"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--用戶中框(logout btn)-->
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/profile3"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/signOutBtn"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/sign_out_btn"
+                            android:shadowColor="#A8A8A8"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="5"
+                            android:text="@string/sign_out_btn_name"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--用戶底框(內容)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+                    <!--                    app:layout_constraintBottom_toTopOf="@+id/linearLayout4"-->
+                    <!--用戶底框內容 email-->
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="30dp"-->
+                    <!--                        android:layout_marginRight="30dp"-->
+                    <!--                        android:orientation="vertical"-->
+                    <!--                        android:paddingTop="10dp">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:orientation="horizontal">-->
+                    <!--                            &lt;!&ndash;用戶底框內容 email標題&ndash;&gt;-->
+                    <!--                            <LinearLayout-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:orientation="horizontal">-->
+
+                    <!--                                <TextView-->
+                    <!--                                    android:layout_width="wrap_content"-->
+                    <!--                                    android:layout_height="wrap_content"-->
+                    <!--                                    android:text="@string/profile_emailTitleText"-->
+                    <!--                                    android:textColor="#220088"-->
+                    <!--                                    android:textSize="20sp"-->
+                    <!--                                    android:textStyle="bold" />-->
+                    <!--                            </LinearLayout>-->
+
+                    <!--                            <View-->
+                    <!--                                android:layout_width="5dp"-->
+                    <!--                                android:layout_height="2dp" />-->
+                    <!--                            &lt;!&ndash;用戶底框內容 email輸入與顯示&ndash;&gt;-->
+                    <!--                            <TextView-->
+                    <!--                                android:id="@+id/profileEmail"-->
+                    <!--                                android:layout_width="wrap_content"-->
+                    <!--                                android:layout_height="wrap_content"-->
+                    <!--                                android:paddingTop="3dp"-->
+                    <!--                                android:text="@string/profile_default_email"-->
+                    <!--                                android:textColor="@android:color/black"-->
+                    <!--                                android:textSize="20sp" />-->
+                    <!--                        </LinearLayout>-->
+                    <!--                    </LinearLayout>-->
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="2dp"-->
+                    <!--                        android:layout_marginTop="10dp"-->
+                    <!--                        android:layout_marginBottom="10dp"-->
+                    <!--                        android:background="#888888" />-->
+
+                    <!--用戶底框內容 name-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!--用戶底框內容 name標題-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <!--用戶底框內容 name輸入與顯示-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/profile_nameTitleText"
+                                    android:textColor="#220088"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp" />
+
+                            <EditText
+                                android:id="@+id/profileName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:paddingTop="3dp"
+                                android:background="@drawable/input_field_style"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:hint="@string/profile_default_name"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp" />
+                                <!-- android:text="@string/profile_default_name"-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/profileName"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:paddingTop="3dp"-->
+                            <!--                                android:text="@string/profile_name"-->
+                            <!--                                android:textColor="@android:color/black"-->
+                            <!--                                android:textSize="20sp" />-->
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvNameErrorText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_error_name"
+                            android:textColor="@color/errorTextColorRed"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#888888" />
+
+
+                    <!--用戶底框內容 性別-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!--用戶底框內容 TEL標題-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <!--用戶底框內容 TEL輸入與顯示-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/profile_genderTitleText"
+                                    android:textColor="#220088"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp" />
+
+                            <RadioGroup
+                                android:id="@+id/genderRg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="5dp"
+                                    android:layout_height="2dp" />
+
+                                <RadioButton
+                                    android:id="@+id/gender_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/profile_gender_male"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="5dp"
+                                    android:layout_height="2dp" />
+
+                                <RadioButton
+                                    android:id="@+id/gender_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/profile_gender_female"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="5dp"
+                                    android:layout_height="2dp" />
+
+                                <RadioButton
+                                    android:id="@+id/gender_other"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="@string/profile_gender_other"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                            <!--                            <EditText-->
+                            <!--                                android:id="@+id/profileGender"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:ems="10"-->
+                            <!--                                android:inputType="phone"-->
+                            <!--                                android:paddingTop="3dp"-->
+                            <!--                                android:text="@string/profile_default_tel"-->
+                            <!--                                android:textColor="@android:color/black"-->
+                            <!--                                android:textSize="20sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/profileTEL"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:paddingTop="3dp"-->
+                            <!--                                android:text="未填寫"-->
+                            <!--                                android:textColor="#666666"-->
+                            <!--                                android:textSize="20sp" />-->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#888888" />
+
+                    <!--用戶底框內容 TEL-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <!--用戶中框內容 TEL標題-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <!--用戶中框內容 TEL輸入與顯示-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/profile_telTitleText"
+                                    android:textColor="#220088"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="5dp"
+                                android:layout_height="2dp" />
+
+                            <EditText
+                                android:id="@+id/profilePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="phone"
+                                android:paddingTop="3dp"
+                                android:background="@drawable/input_field_style"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:hint="@string/profile_default_tel"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp" />
+                                <!-- android:text="@string/profile_default_tel"-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/profileTEL"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:paddingTop="3dp"-->
+                            <!--                                android:text="未填寫"-->
+                            <!--                                android:textColor="#666666"-->
+                            <!--                                android:textSize="20sp" />-->
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTelErrorText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profile_error_tel"
+                            android:textColor="@color/errorTextColorRed"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <!-- android:textColor="#666666"-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#888888" />
+
+                    <!--用戶底框編輯按鈕範圍-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout_profileEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <!--用戶底框編輯按鈕-->
+                            <Button
+                                android:id="@+id/profileEditBtn"
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/profile_btn"
+                                android:shadowColor="#82BA61"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/profile_editProfile_btnText"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--用戶底框紀錄與取消按鈕範圍-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout_profileSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <!--用戶底框紀錄與取消按鈕-->
+                            <Button
+                                android:id="@+id/profileSaveBtn"
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/profile_btn"
+                                android:shadowColor="#82BA61"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/profile_saveProfile_btnText"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="2dp" />
+
+                            <Button
+                                android:id="@+id/profileCancelBtn"
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/profile_btn"
+                                android:shadowColor="#82BA61"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/profile_cancel_buttonText"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

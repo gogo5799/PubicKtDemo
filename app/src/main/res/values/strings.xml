@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">台灣天氣預報</string>
+    <string name="signInText">google登入</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_title_name">Profile</string>
+    <!--    <string name="sign_out_btn_name">Sign out</string>-->
+    <string name="sign_out_btn_name">登出</string>
+    <string name="weatherTitle">weather</string>
+    <string name="recyclerviewHeader">Tv Shows/Most</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="weather_app_text">weather app</string>
+    <string name="group_name_text">YiTing Demo</string>
+    <string name="google_login_btn_text">Google Login</string>
+    <!--    fb auth-->
+    <string name="facebook_app_id">396068994923523</string>
+    <string name="fb_login_protocol_scheme">fb396068994923523</string>
+    <!--profile-->
+    <string name="profile_emailTitleText">Email:</string>
+    <string name="profile_nameTitleText">姓名:</string>
+    <string name="profile_telTitleText">電話:</string>
+    <string name="profile_genderTitleText">性別:</string>
+    <string name="profile_gender_male">男</string>
+    <string name="profile_gender_female">女</string>
+    <string name="profile_gender_other">秘密</string>
+    <string name="profile_default_email">請輸入email</string>
+    <string name="profile_default_name">請輸入名字</string>
+    <string name="profile_default_tel">請輸入電話</string>
+    <string name="profile_blank">未填寫</string>
+    <string name="profile_blank_name">名字不能為空</string>
+    <string name="profile_error_name">名字格式錯誤</string>
+    <string name="profile_Name_length_error">名字錯誤,長度不能大於</string>
+    <string name="profile_Phone_length_error">電話錯誤,長度不能大於</string>
+    <string name="profile_error_tel">電話格式錯誤</string>
+    <string name="profile_editProfile_btnText">編輯</string>
+    <string name="profile_saveProfile_btnText">修改完成</string>
+    <string name="profile_cancel_buttonText">取消</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+
+    <string name="hello_world">Hello Square World!</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!--register page 服務條款與隱私權政策聲明文字  -->
+    <string name="privacy_policy_title">服務條款與隱私權政策聲明</string>
+    <string name="privacy_policy_content_opening">非常歡迎您下載本App，為了讓您能夠安心使用本App的各項服務與資訊，特此向您說明本App的隱私權保護政策，以保障您的權益，請您詳閱下列內容：</string>
+    <string name="privacy_policy_content_1_subtitle">一、隱私權保護政策的適用範圍</string>
+    <string name="privacy_policy_content_1">隱私權保護政策內容，包括本App如何處理在您使用App服務時收集到的個人識別資料。隱私權保護政策不適用於本App以外的相關連結外部網頁，也不適用於非本App所委託或參與管理的人員。</string>
+    <string name="privacy_policy_content_2_subtitle">二、個人資料的蒐集、處理及利用方式</string>
+    <string name="privacy_policy_content_2">本App將向使用者蒐集以下個人資料。若您拒絕提供，將無法提供您使用本 APP 相關服務：您登入使用本App時，根據本App提供服務性質不同，我們會請您提供個人資訊，包括：帳號、密碼、電話、營造業編號、建築師開業證書母號、電子簽名及其他相關必要資料。於一般連線時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的作業系統、瀏覽及點選資料記錄等，做為我們增進App服務的參考依據，此記錄為內部應用，決不對外公佈。</string>
+    <string name="privacy_policy_content_3_subtitle">三、資料之保護</string>
+    <string name="privacy_policy_content_3">本App主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。如因業務需要有必要委託其他單位提供服務時，本App亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</string>
+    <string name="privacy_policy_content_4_subtitle">四、網站對外的相關連結</string>
+    <string name="privacy_policy_content_4">本App的網頁提供其他網站的網路連結，您也可經由本App所提供的連結，點選進入其他網站。但該連結網站不適用本App的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。</string>
+    <string name="privacy_policy_content_5_subtitle">五、與第三人共用個人資料之政策</string>
+    <string name="privacy_policy_content_5">本App絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。 前項但書之情形包括不限於：經由您書面同意。法律明文規定。為免除您生命、身體、自由或財產上之危險。與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人。當您在App裡的行為，違反服務條款或可能損害或妨礙App與其他使用者權益或導致任何人遭受損害時，經App管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。有利於您的權益。</string>
+    <string name="privacy_policy_content_6_subtitle">六、隱私權保護政策之修正</string>
+    <string name="privacy_policy_content_6">本App隱私權保護政策將因應需求隨時進行修正。</string>
+    <string name="register_button">接受協議並註冊</string>
+    <string name="Cancel_registration_button">不同意並離開</string>
+
+</resources>

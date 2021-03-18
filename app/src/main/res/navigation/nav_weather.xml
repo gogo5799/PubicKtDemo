@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_weather"
+    app:startDestination="@id/weather1Fragment">
+
+    <fragment
+        android:id="@+id/weather1Fragment"
+        android:name="com.yitinglin.kotlinjetpackdemo.view.Weather1Fragment"
+        android:label="fragment_weather1"
+        tools:layout="@layout/fragment_weather1">
+    </fragment>
+    <fragment
+        android:id="@+id/weather2Fragment"
+        android:name="com.yitinglin.kotlinjetpackdemo.view.Weather2Fragment"
+        android:label="fragment_weather2"
+        tools:layout="@layout/fragment_weather2" />
+    <fragment
+        android:id="@+id/weather3Fragment"
+        android:name="com.yitinglin.kotlinjetpackdemo.view.Weather3Fragment"
+        android:label="fragment_weather3"
+        tools:layout="@layout/fragment_weather3" />
+    <fragment
+        android:id="@+id/weatherFragment2"
+        android:name="com.yitinglin.kotlinjetpackdemo.view.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather">
+        <action android:id="@+id/action_w0_to_wx"
+            app:destination="@+id/w0"/>
+        <argument android:name="weatherData"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+</navigation>

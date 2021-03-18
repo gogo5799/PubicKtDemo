@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  navigation menu-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_cyan">#E0FFFF</color>
+<!-- recyclerview-->
+    <color name="colorPrimary">#141A31</color>
+    <color name="colorPrimaryDark">#081029</color>
+    <color name="colorAccent">#0097FB</color>
+    <color name="colorTextIcons">#FFFFFF</color>
+    <color name="colorPrimaryLight">#1E2746</color>
+    <color name="colorTextPrimary">#CBD5ED</color>
+    <color name="colorTextSecondary">#4A5B82</color>
+    <color name="colorTextOther">#5AD303</color>
+    <color name="colorThemeExtra">#FF5252</color>
+
+<!--  loginPage-->
+    <color name="loginPageColorPrimary">#131EEA</color>
+    <color name="loginPageColorPrimaryDark">#0D16C1</color>
+    <color name="loginPageColorAccent">#F13413</color>
+    <color name="loginPageColorLayerDark">#D6666666</color>
+    <color name="loginPageColorLayerSemiDark">#60000000</color>
+    <color name="loginPageColorWhite">#FFFFFFFF</color>
+    <color name="loginPageColorTextPrimary">#212121</color>
+    <color name="loginPageColorTextHint">#808080</color>
+    <color name="loginPageColorLightCyan">#E0FFFF</color>
+
+    <!-- error text color-->
+    <color name="errorTextColorRed">#CC0000</color>
+
+    <!-- register page-->
+    <color name="register_page_background_honeydew">#F0FFF0</color>
+    <color name="register_page_background_aquamarine">#7FFFD4</color>
+    <color name="register_page_background_ghostwhite">#F8F8FF</color>
+    <color name="register_page_background_whitesmoke">#F5F5F5</color>
+</resources>
