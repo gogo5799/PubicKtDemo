@@ -71,7 +71,7 @@ class UserDataViewModel : ViewModel() {
         //success
         Coroutines().main {
             try {
-                val userRepository = UserRepository(AppApi())
+                val userRepository = UserRepository(AppApi.userClient)
                 val userResponse = userRepository.userLiveData(clientUser)
                 if (userResponse != null) {
                     if (userResponse.clientBUD.sysId > 0 && userResponse.errorCode >= 0) {
